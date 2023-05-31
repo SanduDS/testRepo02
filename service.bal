@@ -20,7 +20,7 @@ type Book record {|
 
 map<Book> books = {};
 
-service /readinglist on new http:Listener(9090) {
+ /readinglist on new http:Listener(9090) {
 
     resource function get books() returns Book[]|error? {
         return books.toArray();
